@@ -103,6 +103,10 @@ $servicesCredentials = array(
         'key'       => '',
         'secret'    => '',
     ),
+    'nike' => array(
+        'key'       => '',
+        'secret'    => '',
+    ),
     'parrotFlowerPower' => array(
         'key'       => '',
         'secret'    => '',
