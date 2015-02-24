@@ -1,4 +1,12 @@
 <?php
+/**
+ * Vimeo service.
+ *
+ * @author  Pedro Ammorim <contact@pamorim.fr>
+ * @license http://www.opensource.org/licenses/mit-license.html MIT License
+ * @link    https://developer.vimeo.com/
+ * @link    https://developer.vimeo.com/api/authentication
+ */
 
 namespace OAuth\OAuth2\Service;
 
@@ -13,17 +21,17 @@ use OAuth\Common\Http\Uri\UriInterface;
 /**
  * Vimeo service.
  *
- * @author      Pedro Ammorim <contact@pamorim.fr>
- * @license     http://www.opensource.org/licenses/mit-license.html  MIT License
- *
- * Documentation
- * @link        https://developer.vimeo.com/
- * @link        https://developer.vimeo.com/api/authentication
+ * @author  Pedro Ammorim <contact@pamorim.fr>
+ * @license http://www.opensource.org/licenses/mit-license.html MIT License
+ * @link    https://developer.vimeo.com/
+ * @link    https://developer.vimeo.com/api/authentication
  */
 class Vimeo extends AbstractService
 {
     // API version
     const VERSION = '3.2';
+    // API Header Accept
+    const HEADER_ACCEPT = 'application/vnd.vimeo.*+json;version='.self::VERSION;
 
     /**
      * Scopes
@@ -54,7 +62,14 @@ class Vimeo extends AbstractService
         $scopes = array(),
         UriInterface $baseApiUri = null
     ) {
-        parent::__construct($credentials, $httpClient, $storage, $scopes, $baseApiUri, true);
+        parent::__construct(
+            $credentials,
+            $httpClient,
+            $storage,
+            $scopes,
+            $baseApiUri,
+            true
+        );
 
         if (null === $baseApiUri) {
             $this->baseApiUri = new Uri('https://api.vimeo.com/');
@@ -95,9 +110,13 @@ class Vimeo extends AbstractService
         if (null === $data || !is_array($data)) {
             throw new TokenResponseException('Unable to parse response.');
         } elseif (isset($data['error_description'])) {
-            throw new TokenResponseException('Error in retrieving token: "' . $data['error_description'] . '"');
+            throw new TokenResponseException(
+                'Error in retrieving token: "' . $data['error_description'] . '"'
+            );
         } elseif (isset($data['error'])) {
-            throw new TokenResponseException('Error in retrieving token: "' . $data['error'] . '"');
+            throw new TokenResponseException(
+                'Error in retrieving token: "' . $data['error'] . '"'
+            );
         }
 
         $token = new StdOAuth2Token();
@@ -124,7 +143,7 @@ class Vimeo extends AbstractService
      */
     protected function getExtraOAuthHeaders()
     {
-        return array('Accept' => 'application/vnd.vimeo.*+json;version='.self::VERSION);
+        return array('Accept' => self::HEADER_ACCEPT);
     }
 
     /**
@@ -132,6 +151,6 @@ class Vimeo extends AbstractService
      */
     protected function getExtraApiHeaders()
     {
-        return array('Accept' => 'application/vnd.vimeo.*+json;version='.self::VERSION);
+        return array('Accept' => self::HEADER_ACCEPT);
     }
 }
