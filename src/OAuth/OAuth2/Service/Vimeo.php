@@ -31,7 +31,7 @@ class Vimeo extends AbstractService
     // API version
     const VERSION = '3.2';
     // API Header Accept
-    const HEADER_ACCEPT = 'application/vnd.vimeo.*+json;version='.self::VERSION;
+    const HEADER_ACCEPT = 'application/vnd.vimeo.*+json;version=3.2';
 
     /**
      * Scopes
