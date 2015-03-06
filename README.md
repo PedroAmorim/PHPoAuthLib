@@ -80,6 +80,7 @@ Included service implementations
     - SoundCloud
     - Spotify
     - Ustream
+    - Vimeo
     - Vkontakte
     - Yammer
 - more to come!
