@@ -75,6 +75,10 @@ $servicesCredentials = array(
         'key'       => '',
         'secret'    => '',
     ),
+    'hubic' => array(
+        'key'       => '',
+        'secret'    => '',
+    ),
     'instagram' => array(
         'key'       => '',
         'secret'    => '',
