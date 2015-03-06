@@ -2,7 +2,7 @@
 /**
  * Vimeo service.
  *
- * @author  Pedro Ammorim <contact@pamorim.fr>
+ * @author  Pedro Amorim <contact@pamorim.fr>
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
  * @link    https://developer.vimeo.com/
  * @link    https://developer.vimeo.com/api/authentication
@@ -21,7 +21,7 @@ use OAuth\Common\Http\Uri\UriInterface;
 /**
  * Vimeo service.
  *
- * @author  Pedro Ammorim <contact@pamorim.fr>
+ * @author  Pedro Amorim <contact@pamorim.fr>
  * @license http://www.opensource.org/licenses/mit-license.html MIT License
  * @link    https://developer.vimeo.com/
  * @link    https://developer.vimeo.com/api/authentication
