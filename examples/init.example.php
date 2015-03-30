@@ -95,10 +95,14 @@ $servicesCredentials = array(
         'key'       => '',
         'secret'    => '',
     ),
-    'parrotFlowerPower' => array(
+    'netatmo' => array(
         'key'       => '',
         'secret'    => '',
     ),
+    'parrotFlowerPower' => array(
+        'key'       => '',
+        'secret'    => '',
+    },
     'paypal' => array(
         'key'       => '',
         'secret'    => '',

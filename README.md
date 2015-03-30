@@ -73,6 +73,7 @@ Included service implementations
     - LinkedIn
     - Mailchimp
     - Microsoft
+    - Netatmo
     - Parrot Flower Power
     - PayPal
     - Pocket
